@@ -66,19 +66,19 @@
 //  * @param {number[]} digits
 //  * @return {number[]}
 //  */
-//  var plusOne = function(digits) {
-//   let len = digits.length;
-//   for(let i = len - 1; i > -1; i--){
-//       if(digits[i] === 9){
-//           digits[i] = 0
-//       }else{
-//           digits[i] += 1
-//           return digits
-//       }
-//   }
-//   digits = [1].concat(...digits)
-//   return digits
-// };
+ var plusOne = function(digits) {
+  let len = digits.length;
+  for(let i = len - 1; i > -1; i--){
+      if(digits[i] === 9){
+          digits[i] = 0
+      }else{
+          digits[i] += 1
+          return digits
+      }
+  }
+  digits = [1].concat(...digits)
+  return digits
+};
 
 
 var plusOne = function(digits) {
