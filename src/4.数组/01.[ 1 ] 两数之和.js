@@ -74,13 +74,13 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-  var temp = [];
-  for(var i=0;i<nums.length;i++){
-      var dif = target - nums[i];
-      if(temp[dif] != undefined){
-          return [temp[dif],i];
-      }
-      temp[nums[i]] = i;
+  let temp = []
+  for(let i = 0; i < nums.length; i++){
+    let diff = target - nums[i]
+    if(temp[diff] != undefined){
+      return [temp[diff], i]
+    }
+    temp[nums[i]] = i
   }
 };
 
@@ -109,11 +109,25 @@ var twoSum = function(nums, target) {
 //   for()
 // };
 
-
+var twoSum = function(nums, target) {
+  let map = new Map()
+  for(let i = 0; i < nums.length; i++){
+    let diff = target - nums[i]
+    if(map.has(diff)){
+      return [i, map.get(diff)]
+    }else{
+      map.set(nums[i], i)
+    }
+  }
+  return []
+};
 
 // 测试用例
 // let test = '';
+let arr = [2,7,7,7,7,7,11,15]
+let arrSet = new Set([...arr])
 
 console.time('执行用时');
-console.log(twoSum([2,7,11,15], 9));
+console.log(twoSum([2,7,11,15], 17));
+console.log([...arrSet]);
 console.timeEnd('执行用时');

@@ -121,6 +121,12 @@ var removeDuplicates = function(nums) {
 // let test = [0,0,1,3,3,4,1,1,2,2]
 // text.sort()//排序
 
+// let arr = [2,7,7,7,7,7,11,15]
+// let arrSet = new Set([...arr])
+
+// console.time('执行用时');
+// console.log([...arrSet]);
+
 console.time('执行用时');
 console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4]));
 console.timeEnd('执行用时');
